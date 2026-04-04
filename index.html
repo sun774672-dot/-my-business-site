@@ -740,7 +740,7 @@
   <div class="hero-stats">
     <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Задоволених клієнтів</div></div>
     <div class="stat"><div class="stat-num">1–2год</div><div class="stat-label">Час доставки</div></div>
-    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Видів букетів</div></div>
+    <div class="stat"><div class="stat-num">65+</div><div class="stat-label">Видів букетів</div></div>
     <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Середня оцінка</div></div>
   </div>
 </section>
@@ -909,7 +909,7 @@
 
     <div class="builder-preview">
       <div class="builder-preview-card">
-        <img id="builderPreviewImg" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80" alt="Приклад реального букету" />
+        <img id="builderPreviewImg" src="https://images.pexels.com/photos/29158679/pexels-photo-29158679.jpeg" alt="Приклад реального букету" />
         <div class="builder-preview-body">
           <div class="product-name" id="builderPreviewTitle">Авторський букет</div>
           <div class="product-desc" id="builderPreviewDesc">Зберіть власну композицію — ми підготуємо її вручну.</div>
@@ -1390,17 +1390,17 @@ const products = [
   },
   {
     id: 2, name: 'Золоте сонце', desc: 'Соняшники, ромашки та сезонна зелень для теплого настрою', price: 990,
-    img: 'https://images.unsplash.com/photo-1470509037663-253afd7f0f51?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.pexels.com/photos/18062544/pexels-photo-18062544.jpeg',
     category: 'budget', tag: '', badge: ''
   },
   {
     id: 3, name: 'Romantica', desc: 'Класичний букет з червоних троянд для яскравого зізнання', price: 1990,
-    img: 'https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.pexels.com/photos/11626588/pexels-photo-11626588.jpeg',
     category: 'mid', tag: '', badge: 'Топ'
   },
   {
     id: 4, name: 'Лавандовий мрій', desc: 'Лілові акценти, матіола та ніжне повітряне пакування', price: 1390,
-    img: 'https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.pexels.com/photos/29158679/pexels-photo-29158679.jpeg',
     category: 'budget', tag: 'new', badge: 'Новинка'
   },
   {
@@ -1415,14 +1415,74 @@ const products = [
   },
   {
     id: 7, name: 'Wedding Whisper', desc: 'Повітряний весільний букет у кремово-білій палітрі', price: 3190,
-    img: 'https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.pexels.com/photos/34969445/pexels-photo-34969445.jpeg',
     category: 'premium', tag: '', badge: 'Преміум'
   },
   {
     id: 8, name: 'Польовий мікс', desc: 'Живий букет із сезонних польових квітів у крафті', price: 1180,
-    img: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.pexels.com/photos/15899242/pexels-photo-15899242.jpeg',
     category: 'budget', tag: 'new', badge: 'Новинка'
   }
+
+  ,
+  {
+    id: 9, name: 'Весняний дотик', desc: 'Яскраві рожеві тюльпани у свіжому м’ятному пакуванні', price: 1590,
+    img: 'https://images.pexels.com/photos/31265179/pexels-photo-31265179.jpeg',
+    category: 'mid', tag: 'new', badge: 'Новинка'
+  },
+  {
+    id: 10, name: 'Пудрова ніжність', desc: 'Персикові троянди, анемони та легка кремова композиція', price: 2290,
+    img: 'https://images.pexels.com/photos/6428727/pexels-photo-6428727.jpeg',
+    category: 'mid', tag: '', badge: ''
+  },
+  {
+    id: 11, name: 'Блакитна хмарка', desc: 'Ніжний букет у блакитно-білій палітрі з романтичними стрічками', price: 1890,
+    img: 'https://images.pexels.com/photos/29019354/pexels-photo-29019354.jpeg',
+    category: 'mid', tag: 'new', badge: 'Новинка'
+  },
+  {
+    id: 12, name: 'White Velvet', desc: 'Об’ємний букет білих троянд у контрастному чорному пакуванні', price: 3390,
+    img: 'https://images.pexels.com/photos/31368779/pexels-photo-31368779.jpeg',
+    category: 'premium', tag: '', badge: 'Преміум'
+  },
+  {
+    id: 13, name: 'Місячна еустома', desc: 'Світла авторська композиція з еустоми у лавандовому оформленні', price: 2090,
+    img: 'https://images.pexels.com/photos/20158087/pexels-photo-20158087.jpeg',
+    category: 'mid', tag: '', badge: ''
+  },
+  {
+    id: 14, name: 'Квітковий комплімент', desc: 'Мила міні-композиція з тюльпаном, хризантемою та гіпсофілою', price: 990,
+    img: 'https://images.pexels.com/photos/7785380/pexels-photo-7785380.jpeg',
+    category: 'budget', tag: 'new', badge: 'Новинка'
+  }
+
+  ,
+  {
+    id: 15, name: 'Ранкова світанкова', desc: 'Легка композиція у рожево-персиковій палітрі з ніжними сезонними квітами', price: 1790,
+    img: 'https://images.pexels.com/photos/36268229/pexels-photo-36268229.jpeg',
+    category: 'mid', tag: 'new', badge: 'Новинка'
+  },
+  {
+    id: 16, name: 'Cherry Bloom', desc: 'Ніжні білі нарциси з евкаліптом у крафтовому пакуванні', price: 2190,
+    img: 'https://images.pexels.com/photos/35359685/pexels-photo-35359685.jpeg',
+    category: 'mid', tag: '', badge: ''
+  },
+  {
+    id: 17, name: 'Пудровий акцент', desc: 'Мінібукет зі стабілізованої троянди та сухоцвітів у теплій пудровій палітрі', price: 1990,
+    img: 'https://images.pexels.com/photos/36832663/pexels-photo-36832663.jpeg',
+    category: 'mid', tag: 'new', badge: 'Новинка'
+  },
+  {
+    id: 18, name: 'Сонячний комплімент', desc: 'Пишні рожеві півонії в лавандовому пакуванні для ніжного сюрпризу', price: 1490,
+    img: 'https://images.pexels.com/photos/17096603/pexels-photo-17096603.jpeg',
+    category: 'budget', tag: '', badge: ''
+  },
+  {
+    id: 19, name: 'Лілова поезія', desc: 'Повітряна композиція з коралових гвоздик та гіпсофіли у романтичному стилі', price: 2390,
+    img: 'https://images.pexels.com/photos/9299446/pexels-photo-9299446.jpeg',
+    category: 'premium', tag: '', badge: 'Преміум'
+  }
+
 ];
 
 let cart = [];
@@ -1615,12 +1675,52 @@ function selectOccasion(key, card) {
 
 /* ── CUSTOM BOUQUET BUILDER ── */
 const bouquetBaseByFlower = {
-  peony: { name: 'Півонії', base: 1450, image: 'https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1200&q=80' },
-  rose: { name: 'Троянди', base: 1350, image: 'https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?auto=format&fit=crop&w=1200&q=80' },
-  hydrangea: { name: 'Гортензії', base: 1650, image: 'https://images.pexels.com/photos/33632323/pexels-photo-33632323.jpeg' },
-  tulip: { name: 'Тюльпани', base: 1200, image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1200&q=80' },
-  mixed: { name: 'Мікс сезонних квітів', base: 1500, image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80' }
+  peony: { name: 'Півонії', base: 1450, image: 'https://images.pexels.com/photos/9299446/pexels-photo-9299446.jpeg' },
+  rose: { name: 'Троянди', base: 1350, image: 'https://images.pexels.com/photos/33886737/pexels-photo-33886737.png' },
+  hydrangea: { name: 'Гортензії', base: 1650, image: 'https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg' },
+  tulip: { name: 'Тюльпани', base: 1200, image: 'https://images.pexels.com/photos/29158679/pexels-photo-29158679.jpeg' },
+  mixed: { name: 'Мікс сезонних квітів', base: 1500, image: 'https://images.pexels.com/photos/15899242/pexels-photo-15899242.jpeg' }
 };
+
+const bouquetOccasionImages = {
+  'Романтичний сюрприз': 'https://images.pexels.com/photos/33886737/pexels-photo-33886737.png',
+  'День народження': 'https://images.pexels.com/photos/12169287/pexels-photo-12169287.jpeg',
+  'Подяка': 'https://images.pexels.com/photos/36268229/pexels-photo-36268229.jpeg',
+  'Весілля': 'https://images.pexels.com/photos/34969445/pexels-photo-34969445.jpeg',
+  'Комплімент без приводу': 'https://images.pexels.com/photos/15899242/pexels-photo-15899242.jpeg'
+};
+
+function getBuilderPreviewImage(flowerKey, occasion, palette) {
+  const flowerImage = bouquetBaseByFlower[flowerKey]?.image;
+
+  const specialByFlowerAndOccasion = {
+    rose: {
+      'Романтичний сюрприз': 'https://images.pexels.com/photos/33886737/pexels-photo-33886737.png'
+    },
+    tulip: {
+      'День народження': 'https://images.pexels.com/photos/29158679/pexels-photo-29158679.jpeg'
+    },
+    mixed: {
+      'Комплімент без приводу': 'https://images.pexels.com/photos/15899242/pexels-photo-15899242.jpeg'
+    }
+  };
+
+  if (specialByFlowerAndOccasion[flowerKey] && specialByFlowerAndOccasion[flowerKey][occasion]) {
+    return specialByFlowerAndOccasion[flowerKey][occasion];
+  }
+
+  if (occasion === 'Весілля') {
+    if (flowerKey === 'peony') return 'https://images.pexels.com/photos/34969445/pexels-photo-34969445.jpeg';
+    if (flowerKey === 'hydrangea') return 'https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg';
+    if (flowerKey === 'rose') return 'https://images.pexels.com/photos/34969445/pexels-photo-34969445.jpeg';
+  }
+
+  if (occasion === 'Подяка' && palette === 'Біла та кремова' && flowerKey === 'hydrangea') {
+    return 'https://images.pexels.com/photos/36268229/pexels-photo-36268229.jpeg';
+  }
+
+  return flowerImage;
+}
 const bouquetSizeMap = {
   small: { name: 'Малий', price: 0 },
   medium: { name: 'Середній', price: 350 },
@@ -1648,6 +1748,7 @@ function updateCustomBouquet() {
   }));
 
   const flower = bouquetBaseByFlower[flowerKey];
+  const previewImage = getBuilderPreviewImage(flowerKey, occasion, palette);
   const size = bouquetSizeMap[sizeKey];
   const extrasPrice = extras.reduce((sum, extra) => sum + extra.price, 0);
   const stemsPrice = Math.max(0, stems - 11) * 28;
@@ -1659,7 +1760,7 @@ function updateCustomBouquet() {
     name: `Букет «${flower.name}»`,
     desc: `${occasion} · ${palette} палітра · ${size.name.toLowerCase()} формат`,
     price: totalPrice,
-    img: flower.image,
+    img: previewImage,
     category: 'custom',
     stems,
     wrap,
@@ -1667,7 +1768,7 @@ function updateCustomBouquet() {
     extras: extras.map(extra => extra.name)
   };
 
-  document.getElementById('builderPreviewImg').src = flower.image;
+  document.getElementById('builderPreviewImg').src = previewImage;
   document.getElementById('builderPreviewTitle').textContent = `Авторський букет «${flower.name}»`;
   document.getElementById('builderPreviewDesc').textContent = `${occasion} у відтінках «${palette.toLowerCase()}» з ручним пакуванням.`;
   document.getElementById('builderPreviewPrice').textContent = `${totalPrice.toLocaleString('uk')} ₴`;
@@ -1758,7 +1859,7 @@ updateCustomBouquet();
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const fallbackImage = 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80';
+  const fallbackImage = 'https://images.pexels.com/photos/33886737/pexels-photo-33886737.png';
   document.querySelectorAll('img').forEach(img => {
     img.addEventListener('error', function handleImageError() {
       if (this.dataset.fallbackApplied === 'true') return;
