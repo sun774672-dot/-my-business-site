@@ -2,24 +2,114 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petal & Grace</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Petal & Grace — Доставка квітів у Києві</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cf: #f7f2ed;
-            --c2: #f0e6dc;
-            --w: #fff;
-            --tx: #4c2d22;
-            --mu: #9a7060;
-            --ln: #e5cfc1;
-            --ro: #d28c74;
-            --te: #b76449;
-            --te2: #9a4f38;
-            --br: #6b3320;
-            --gr: #25a244;
-            --tg: #2aa bee;
-            --sh0: 0 8px 32px rgba(107,51,32,.12);
+            --c: #f7f2ed; --c2: #f0e6dc; --w: #fff; --tx: #4c2d22;
+            --mu: #9a7060; --ln: #e5cfc1; --ro: #d28c74; --te: #b76449;
+            --te2: #9a4f38; --br: #6b3320; --gr: #25a244; --tg: #2aabee;
+            --sh: 0 8px 32px rgba(107,51,32,.12);
             --sh2: 0 3px 14px rgba(107,51,32,.08);
         }
-        * { margin
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Jost', sans-serif; background: var(--c); color: var(--tx); overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        
+        .W { width: min(1160px, 92%); margin: 0 auto; }
+        section { padding: 70px 0; }
+
+        /* Типографіка */
+        .serif { font-family: 'Cormorant Garamond', serif; }
+        .sec-h { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; color: var(--br); margin-bottom: 12px; font-weight: 700; }
+        .sec-h em { color: var(--ro); font-style: italic; font-weight: 600; }
+        .sec-p { color: var(--mu); line-height: 1.95; font-size: .96rem; max-width: 680px; margin: 0 auto; }
+
+        /* Кнопки */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; border: none; cursor: pointer; border-radius: 999px; font-family: 'Jost', sans-serif; font-weight: 500; transition: .2s; font-size: .92rem; padding: 13px 24px; }
+        .btn-main { background: var(--te); color: #fff; box-shadow: 0 5px 18px rgba(183,100,73,.28); }
+        .btn-main:hover { background: var(--te2); transform: translateY(-2px); }
+
+        /* FAQ */
+        .faq-item { background: var(--w); border: 1px solid var(--ln); border-radius: 15px; overflow: hidden; margin-bottom: 10px; }
+        .faq-question { padding: 15px 18px; font-weight: 600; color: var(--br); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height .34s ease; padding: 0 18px; color: var(--mu); font-size: .87rem; }
+        .faq-item.open .faq-answer { max-height: 150px; padding: 0 18px 15px; }
+        .faq-item.open .faq-arrow { transform: rotate(45deg); }
+
+        /* Анімації */
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+        .pulse-dot { width: 7px; height: 7px; background: #fff; border-radius: 50%; animation: blink 1.6s infinite; }
+    </style>
+</head>
+<body>
+
+    <div class="topbar">
+        Доставка квітів по Києву. <strong>Замовляйте зараз!</strong> [cite: 83]
+    </div>
+
+    <nav class="nav">
+        <div class="W nav-wrap">
+            <a href="#" class="logo">Petal <span>& Grace</span></a>
+            <div class="nav-links">
+                <a href="#catalog">Каталог</a>
+                <a href="#constructor">Конструктор</a>
+                <a href="#reviews">Відгуки</a>
+                <a href="#contacts">Контакти</a>
+            </div>
+            <div class="nav-right">
+                <span class="nav-tel">+38 (093) 123-45-67</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="faq-section" id="faq">
+        <div class="W">
+            <h2 class="sec-h center">Популярні <em>питання</em></h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Як працює доставка? <span class="faq-arrow">+</span>
+                    </div>
+                    <div class="faq-answer">Ми доставляємо квіти кур'єром протягом 2-х годин після оформлення замовлення.</div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <script>
+        // Скрипт для акордеона FAQ
+        function toggleFaq(el) {
+            var item = el.parentElement;
+            var wasOpen = item.classList.contains("open");
+            document.querySelectorAll(".faq-item.open").forEach(function(i) {
+                i.classList.remove("open");
+            });
+            if (!wasOpen) {
+                item.classList.add("open");
+            }
+        }
+
+        // Дані для квізу (вибір букета)
+        var quizData = {
+            date: { title: "Рекомендуємо: Червона класика або Ніжність", desc: "Троянди — безперечна класика для романтичних моментів." },
+            thanks: { title: "Рекомендуємо: Весняний мікс або Аромат лілій", desc: "Теплий букет із сезонних квітів — відмінний вибір." },
+            nosub: { title: "Рекомендуємо: Garden story або Рожева мрія", desc: "Яскравий Garden story або ніжна Рожева мрія зроблять день особливим." }
+        };
+
+        function quizAnswer(el, key) {
+            document.querySelectorAll(".quiz-opt").forEach(function(b) { b.classList.remove("picked"); });
+            el.classList.add("picked");
+            var data = quizData[key];
+            document.getElementById("quizTitle").textContent = data.title;
+            document.getElementById("quizDesc").textContent = data.desc;
+            document.getElementById("quizResult").classList.add("show");
+        }
+    </script>
+</body>
+</html>
